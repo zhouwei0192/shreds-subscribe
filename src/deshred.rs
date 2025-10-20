@@ -218,7 +218,7 @@ pub fn reconstruct_shreds(
         }
 
         let txn_count : u64 = entries.iter().map(|e| e.transactions.len() as u64).sum();
-        debug!("Successfully decoded slot: {slot} start_data_complete_idx: {start_data_complete_idx} end_data_complete_idx: {end_data_complete_idx} with entry count: {}, txn count: {txn_count}",entries.len(),);
+        println!("Successfully decoded slot: {slot} start_data_complete_idx: {start_data_complete_idx} end_data_complete_idx: {end_data_complete_idx} with entry count: {}, txn count: {txn_count}",entries.len(),);
 
         to_deshred.iter().for_each(|shred| {
             let Some(shred) = shred.as_ref() else {
