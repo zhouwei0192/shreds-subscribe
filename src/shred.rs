@@ -40,7 +40,7 @@ pub async fn run_udp_server(
                     packet_sender,
                     recycler,
                     Arc::new(StreamerReceiveStats::new("packet_modifier")),
-                    Duration::from_millis(1),
+                    Some(Duration::from_millis(1)),
                     true,
                     None,
                     false,

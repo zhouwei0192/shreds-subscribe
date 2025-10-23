@@ -432,7 +432,7 @@ impl PartialEq for ComparableShred {
                         <ShredCode as solana_ledger::shred::traits::Shred>::SIZE_OF_PAYLOAD
                             .saturating_sub(
                                 usize::from(proof_size)
-                                    * solana_ledger::shred::merkle::SIZE_OF_MERKLE_PROOF_ENTRY
+                                    * solana_ledger::shred::merkle_tree::SIZE_OF_MERKLE_PROOF_ENTRY
                                     + if resigned {
                                     solana_ledger::shred::SIZE_OF_SIGNATURE
                                 } else {
